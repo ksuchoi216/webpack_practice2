@@ -19,11 +19,14 @@ Download the moment.min.js file to local, and then load the javascript file at h
 ```
 
 After using npm
-
+```
 **npm init**
+```
 - create package.json
 
+```
 **npm install moment --save**
+```
 - download moment and keep track of the moment.js by package.json
 
 ```html
@@ -47,10 +50,13 @@ However, this is not working in the browser because the browser dosen't have acc
 (detail: which means loading modules in this way is very tricky - loading files has to be done dynamically, either synchronously (which slows down execution) or asynchronously (which can have timing issues).)
 
 ### this is webpack
+```
 **npm install webpack webpack-cli --save-dev**
+```
 - install webpack and webpack-cli, and keep tracking this as development dependency in package.json.
-
+```
 **./node_modules/.bin/webpack index.js --mode=development**
+```
 - run the webpack tool, and start with index.js, find any require statements, and replace them with proper code to create a single code. "--mode=development" is to keep the Javascript readable for developers.(otherwise --mode=production)
 
 After using webpack,
@@ -61,8 +67,9 @@ After using webpack,
 ### this is config.js
 However, you have to execute "./node_modules/.bin/webpack index.js --mode=development" each time the index.js is changed. This is cumbersome.
 Therefore, we create webpack.config.js to designate the file name and location.
-
+```
 **webpack.config.js**
+```
 ```javascript
 module.exports = {  
   mode: 'development',  
@@ -75,7 +82,9 @@ module.exports = {
 ```
 
 After creating the webpack.config.js
+```
 **./node_modules/.bin/webpack**
+```
 - this is simple version of using webpack with the config.js
 
 ## babel - transpiling code
