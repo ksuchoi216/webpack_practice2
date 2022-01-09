@@ -20,12 +20,12 @@ Download the moment.min.js file to local, and then load the javascript file at h
 
 After using npm
 ```
-**npm init**
+npm init
 ```
 - create package.json
 
 ```
-**npm install moment --save**
+npm install moment --save
 ```
 - download moment and keep track of the moment.js by package.json
 
@@ -51,11 +51,11 @@ However, this is not working in the browser because the browser dosen't have acc
 
 ### this is webpack
 ```
-**npm install webpack webpack-cli --save-dev**
+npm install webpack webpack-cli --save-dev
 ```
 - install webpack and webpack-cli, and keep tracking this as development dependency in package.json.
 ```
-**./node_modules/.bin/webpack index.js --mode=development**
+./node_modules/.bin/webpack index.js --mode=development
 ```
 - run the webpack tool, and start with index.js, find any require statements, and replace them with proper code to create a single code. "--mode=development" is to keep the Javascript readable for developers.(otherwise --mode=production)
 
@@ -68,7 +68,7 @@ After using webpack,
 However, you have to execute "./node_modules/.bin/webpack index.js --mode=development" each time the index.js is changed. This is cumbersome.
 Therefore, we create webpack.config.js to designate the file name and location.
 ```
-**webpack.config.js**
+webpack.config.js
 ```
 ```javascript
 module.exports = {  
@@ -83,7 +83,7 @@ module.exports = {
 
 After creating the webpack.config.js
 ```
-**./node_modules/.bin/webpack**
+./node_modules/.bin/webpack
 ```
 - this is simple version of using webpack with the config.js
 
@@ -149,13 +149,16 @@ adding build and watch statements at the scripts part of package.json
 ```
 
 "build" run webpack with the --progress opthion(to show the percent progress) and --mode=production option (to minimizse code for production)
+```
 npm run build
-
+```
 "watch" option instead to automatically re-run webpack each time javascript changes.(good for development)
-**npm run watch**
-
+```
+npm run watch
+```
 Note that the scripts in package.json can run webpack without having to specify the full path ./node_modules/.bin/webpack, since node.js knows the location of each npm module path.
-
-**npm install webpack-dev-server --save-dev**
-**npm run serve**
+```
+npm install webpack-dev-server --save-dev
+npm run serve
+```
 This will automatically open the index.html website in your browser with an address of localhost:8080 (by default). Any time you change your JavaScript in index.js, webpack-dev-server will rebuild its own bundled JavaScript and refresh the browser automatically. 
