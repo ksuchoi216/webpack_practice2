@@ -161,4 +161,12 @@ Note that the scripts in package.json can run webpack without having to specify 
 npm install webpack-dev-server --save-dev
 npm run serve
 ```
+```
+  "scripts": {  
+    "test": "echo \"Error: no test specified\" && exit 1",  
+    "build": "webpack --progress -p",  
+    "watch": "webpack --progress --watch",  
+    "serve": "webpack-dev-server --open"  
+  },  
+```
 This will automatically open the index.html website in your browser with an address of localhost:8080 (by default). Any time you change your JavaScript in index.js, webpack-dev-server will rebuild its own bundled JavaScript and refresh the browser automatically. 
